@@ -171,7 +171,7 @@ function Home() {
             <div className="grid cols-4">
               {servicos.map((s) => (
                 <article key={s.title} className="card">
-                  <div className="card-icon" aria-hidden="true"><span style={{ fontSize: 24 }}>{s.icon}</span></div>
+                  <div className="card-icon" aria-hidden="true"><s.Icon size={28} strokeWidth={1.75} /></div>
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
                 </article>
@@ -191,7 +191,7 @@ function Home() {
             <div className="grid cols-4">
               {diferenciais.map((d) => (
                 <article key={d.title} className="card">
-                  <div className="card-icon" aria-hidden="true"><span style={{ fontSize: 24 }}>{d.icon}</span></div>
+                  <div className="card-icon" aria-hidden="true"><d.Icon size={28} strokeWidth={1.75} /></div>
                   <h3>{d.title}</h3>
                   <p>{d.desc}</p>
                 </article>
