@@ -4,10 +4,17 @@ import {
   Wrench, Zap, ScanLine, Disc3, Car, Fuel, ShieldCheck, Flag,
   Timer, GraduationCap, BadgeCheck, Handshake, Instagram, MapPin,
 } from "lucide-react";
-import logoAsset from "@/assets/logo.png";
-import logoFooterAsset from "@/assets/logo-footer.png";
-import mascoteAsset from "@/assets/mascote.png";
-import logoPromoAsset from "@/assets/logo-promo.png";
+import logoAsset from "@/assets/logo.png.asset.json";
+import logoFooterAsset from "@/assets/logo-footer.png.asset.json";
+import mascoteAsset from "@/assets/mascote.png.asset.json";
+import logoPromoAsset from "@/assets/logo-promo.png.asset.json";
+
+const assetUrl = (asset: { url: string }) => asset.url;
+
+const LOGO_URL = assetUrl(logoAsset);
+const LOGO_FOOTER_URL = assetUrl(logoFooterAsset);
+const MASCOTE_URL = assetUrl(mascoteAsset);
+const LOGO_PROMO_URL = assetUrl(logoPromoAsset);
 
 const WHATSAPP_URL =
   "https://wa.me/5517996220268?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Eros%20Auto%20Center%20e%20quero%20um%20atendimento.";
@@ -20,7 +27,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
   name: "Eros Auto Center",
-  image: logoPromoAsset,
+  image: LOGO_PROMO_URL,
   url: "https://erosautocenter.com.br",
   telephone: "+5517996220268",
   address: {
@@ -58,12 +65,12 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
-      { property: "og:image", content: logoPromoAsset },
+      { property: "og:image", content: LOGO_PROMO_URL },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "canonical", href: "/" },
-      { rel: "preload", as: "image", href: logoAsset },
+      { rel: "preload", as: "image", href: LOGO_URL },
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(jsonLd) },
@@ -108,7 +115,7 @@ function Home() {
       <header className="site-header">
         <div className="header-inner">
           <a href="#inicio" className="brand" aria-label="Eros Auto Center - Início">
-            <img src={logoAsset} alt="Eros Auto Center" width={220} height={50} />
+            <img src={LOGO_URL} alt="Eros Auto Center" width={220} height={50} />
           </a>
           <nav className="nav-desktop" aria-label="Navegação principal">
             {navLinks.map((l) => (
@@ -154,7 +161,7 @@ function Home() {
               </div>
             </div>
             <div className="hero-mascote">
-              <img src={mascoteAsset} alt="Mascote Eros Dog — mecânico oficial da Eros Auto Center" width={500} height={500} />
+              <img src={MASCOTE_URL} alt="Mascote Eros Dog — mecânico oficial da Eros Auto Center" width={500} height={500} />
             </div>
           </div>
         </section>
@@ -214,7 +221,7 @@ function Home() {
               </div>
             </div>
             <div className="sobre-image">
-              <img src={logoPromoAsset} alt="Mascote Eros Dog com logo Eros Auto Center" loading="lazy" width={380} height={380} />
+              <img src={LOGO_PROMO_URL} alt="Mascote Eros Dog com logo Eros Auto Center" loading="lazy" width={380} height={380} />
             </div>
           </div>
         </section>
@@ -304,7 +311,7 @@ function Home() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <img src={logoFooterAsset} alt="Eros Auto Center" loading="lazy" width={720} height={270} />
+              <img src={LOGO_FOOTER_URL} alt="Eros Auto Center" loading="lazy" width={720} height={270} />
               <p>O melhor amigo do seu carro</p>
             </div>
             <div className="footer-col">
