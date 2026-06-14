@@ -165,7 +165,7 @@ function Home() {
           <div className="container">
             <div className="section-head">
               <span className="eyebrow">O que fazemos</span>
-              <h2>Serviços automotivos completos</h2>
+              <h2>Serviços de Mecânica e Elétrica</h2>
               <p>Soluções técnicas para manter seu carro rodando com segurança e desempenho.</p>
             </div>
             <div className="grid cols-4">
@@ -290,12 +290,12 @@ function Home() {
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener">17 99622-0268</a>
               </div>
               <div className="contato-item">
-                <div className="card-icon" aria-hidden="true"><span style={{ fontSize: 22 }}>📷</span></div>
+                <div className="card-icon" aria-hidden="true"><Instagram size={26} strokeWidth={1.75} /></div>
                 <strong>Instagram</strong>
                 <a href="https://instagram.com/eros.autocenter" target="_blank" rel="noopener">@eros.autocenter</a>
               </div>
               <div className="contato-item">
-                <div className="card-icon" aria-hidden="true"><span style={{ fontSize: 22 }}>📍</span></div>
+                <div className="card-icon" aria-hidden="true"><MapPin size={26} strokeWidth={1.75} /></div>
                 <strong>Endereço</strong>
                 <a href={MAPS_URL} target="_blank" rel="noopener">{ADDRESS}</a>
               </div>
@@ -313,7 +313,7 @@ function Home() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <img src={logoAsset.url} alt="Eros Auto Center" loading="lazy" width={200} height={50} />
+              <img src={logoFooterAsset.url} alt="Eros Auto Center" loading="lazy" width={240} height={90} />
               <p>O melhor amigo do seu carro</p>
             </div>
             <div className="footer-col">
