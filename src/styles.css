@@ -245,7 +245,7 @@ section { padding: 4rem 0; }
 @media (min-width: 640px) { .contato-grid { grid-template-columns: repeat(3, 1fr); } }
 .contato-item {
   background: var(--white); padding: 1.5rem; border-radius: var(--radius);
-  border: 1px solid var(--gray-200); text-align: center;
+  text-align: center; border: 1px solid var(--gray-200);
 }
 .contato-item .card-icon { margin: 0 auto 1rem; }
 .contato-item strong { display: block; color: var(--navy); margin-bottom: .25rem; }
@@ -262,14 +262,18 @@ section { padding: 4rem 0; }
   display: grid; gap: 2rem; grid-template-columns: 1fr;
   padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.08);
 }
-@media (min-width: 700px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
-.footer-brand img { height: 90px; width: auto; }
+@media (min-width: 700px) { .footer-grid { grid-template-columns: minmax(280px, 1.6fr) 1fr 1.2fr; align-items: start; } }
+.footer-brand img { height: auto; width: min(100%, 360px); max-height: 170px; object-fit: contain; }
 .footer-brand p { margin-top: 1rem; font-style: italic; color: #aab3c9; }
 .footer-col h4 { color: var(--white); font-family: 'Exo 2', sans-serif; font-size: 1rem; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: .05em; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
 .footer-col a:hover { color: var(--red); }
 .footer-bottom { padding-top: 1.5rem; text-align: center; font-size: .85rem; color: #8896b3; }
 .footer-bottom a { color: var(--red); font-weight: 600; }
+
+@media (min-width: 1024px) {
+  .footer-brand img { width: 420px; max-height: 190px; }
+}
 
 /* FLOATING WHATSAPP */
 .fab-whatsapp {
