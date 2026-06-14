@@ -4,10 +4,10 @@ import {
   Wrench, Zap, ScanLine, Disc3, Car, Fuel, ShieldCheck, Flag,
   Timer, GraduationCap, BadgeCheck, Handshake, Instagram, MapPin,
 } from "lucide-react";
-import logoAsset from "@/assets/logo.png.asset.json";
-import logoFooterAsset from "@/assets/logo-footer.png.asset.json";
-import mascoteAsset from "@/assets/mascote.png.asset.json";
-import logoPromoAsset from "@/assets/logo-promo.png.asset.json";
+import logoAsset from "@/assets/logo.png";
+import logoFooterAsset from "@/assets/logo-footer.png";
+import mascoteAsset from "@/assets/mascote.png";
+import logoPromoAsset from "@/assets/logo-promo.png";
 
 const WHATSAPP_URL =
   "https://wa.me/5517996220268?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Eros%20Auto%20Center%20e%20quero%20um%20atendimento.";
@@ -20,7 +20,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
   name: "Eros Auto Center",
-  image: logoPromoAsset.url,
+  image: logoPromoAsset,
   url: "https://erosautocenter.com.br",
   telephone: "+5517996220268",
   address: {
@@ -58,12 +58,12 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
-      { property: "og:image", content: logoPromoAsset.url },
+      { property: "og:image", content: logoPromoAsset },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "canonical", href: "/" },
-      { rel: "preload", as: "image", href: logoAsset.url },
+      { rel: "preload", as: "image", href: logoAsset },
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(jsonLd) },
@@ -108,7 +108,7 @@ function Home() {
       <header className="site-header">
         <div className="header-inner">
           <a href="#inicio" className="brand" aria-label="Eros Auto Center - Início">
-            <img src={logoAsset.url} alt="Eros Auto Center" width={220} height={50} />
+            <img src={logoAsset} alt="Eros Auto Center" width={220} height={50} />
           </a>
           <nav className="nav-desktop" aria-label="Navegação principal">
             {navLinks.map((l) => (
@@ -138,7 +138,6 @@ function Home() {
       </header>
 
       <main>
-        {/* HERO */}
         <section id="inicio" className="hero">
           <div className="container hero-inner">
             <div className="hero-text">
@@ -155,12 +154,11 @@ function Home() {
               </div>
             </div>
             <div className="hero-mascote">
-              <img src={mascoteAsset.url} alt="Mascote Eros Dog — mecânico oficial da Eros Auto Center" width={500} height={500} />
+              <img src={mascoteAsset} alt="Mascote Eros Dog — mecânico oficial da Eros Auto Center" width={500} height={500} />
             </div>
           </div>
         </section>
 
-        {/* SERVIÇOS */}
         <section id="servicos">
           <div className="container">
             <div className="section-head">
@@ -180,7 +178,6 @@ function Home() {
           </div>
         </section>
 
-        {/* DIFERENCIAIS */}
         <section id="diferenciais" className="diferenciais">
           <div className="container">
             <div className="section-head">
@@ -200,7 +197,6 @@ function Home() {
           </div>
         </section>
 
-        {/* SOBRE */}
         <section id="sobre">
           <div className="container sobre-inner">
             <div className="sobre-text">
@@ -218,12 +214,11 @@ function Home() {
               </div>
             </div>
             <div className="sobre-image">
-              <img src={logoPromoAsset.url} alt="Mascote Eros Dog com logo Eros Auto Center" loading="lazy" width={380} height={380} />
+              <img src={logoPromoAsset} alt="Mascote Eros Dog com logo Eros Auto Center" loading="lazy" width={380} height={380} />
             </div>
           </div>
         </section>
 
-        {/* CTA MID */}
         <section className="cta-mid">
           <div className="container">
             <h2>Precisa de um diagnóstico para o seu carro?</h2>
@@ -234,7 +229,6 @@ function Home() {
           </div>
         </section>
 
-        {/* AVALIAÇÕES */}
         <section id="avaliacoes">
           <div className="container">
             <div className="section-head">
@@ -252,7 +246,6 @@ function Home() {
           </div>
         </section>
 
-        {/* LOCALIZAÇÃO */}
         <section id="localizacao" className="diferenciais">
           <div className="container">
             <div className="section-head">
@@ -275,7 +268,6 @@ function Home() {
           </div>
         </section>
 
-        {/* CONTATO */}
         <section id="contato" className="contato">
           <div className="container">
             <div className="section-head">
@@ -312,7 +304,7 @@ function Home() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <img src={logoFooterAsset.url} alt="Eros Auto Center" loading="lazy" width={720} height={270} />
+              <img src={logoFooterAsset} alt="Eros Auto Center" loading="lazy" width={720} height={270} />
               <p>O melhor amigo do seu carro</p>
             </div>
             <div className="footer-col">
@@ -351,7 +343,7 @@ function Home() {
 function WhatsAppIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.1-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
+      <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.1-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
     </svg>
   );
 }
