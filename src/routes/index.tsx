@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import {
+  Wrench, Zap, ScanLine, Disc3, Car, Fuel, ShieldCheck, Flag,
+  Timer, GraduationCap, BadgeCheck, Handshake, Instagram, MapPin,
+} from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
+import logoFooterAsset from "@/assets/logo-footer.png.asset.json";
 import mascoteAsset from "@/assets/mascote.png.asset.json";
 import logoPromoAsset from "@/assets/logo-promo.png.asset.json";
 
@@ -77,21 +82,21 @@ const navLinks = [
 ];
 
 const servicos = [
-  { icon: "🔧", title: "Mecânica em geral", desc: "Reparos e manutenção completa do motor ao câmbio." },
-  { icon: "⚡", title: "Auto elétrico", desc: "Diagnóstico e reparo elétrico com equipamentos modernos." },
-  { icon: "🔍", title: "Diagnóstico automotivo", desc: "Scanner profissional para identificar falhas com precisão." },
-  { icon: "🛑", title: "Freios", desc: "Troca de pastilhas, discos e revisão completa do sistema." },
-  { icon: "🚗", title: "Suspensão", desc: "Amortecedores, molas e alinhamento para mais segurança." },
-  { icon: "💉", title: "Injeção eletrônica", desc: "Limpeza, regulagem e reparo da injeção do seu veículo." },
-  { icon: "🛠️", title: "Manutenção preventiva", desc: "Revisões periódicas para evitar problemas maiores." },
-  { icon: "🏁", title: "Nacionais e importados", desc: "Atendimento técnico especializado para todas as marcas." },
+  { Icon: Wrench, title: "Mecânica em geral", desc: "Reparos e manutenção completa do motor ao câmbio." },
+  { Icon: Zap, title: "Auto elétrico", desc: "Diagnóstico e reparo elétrico com equipamentos modernos." },
+  { Icon: ScanLine, title: "Diagnóstico automotivo", desc: "Scanner profissional para identificar falhas com precisão." },
+  { Icon: Disc3, title: "Freios", desc: "Troca de pastilhas, discos e revisão completa do sistema." },
+  { Icon: Car, title: "Suspensão", desc: "Amortecedores, molas e alinhamento para mais segurança." },
+  { Icon: Fuel, title: "Injeção eletrônica", desc: "Limpeza, regulagem e reparo da injeção do seu veículo." },
+  { Icon: ShieldCheck, title: "Manutenção preventiva", desc: "Revisões periódicas para evitar problemas maiores." },
+  { Icon: Flag, title: "Nacionais e importados", desc: "Atendimento técnico especializado para todas as marcas." },
 ];
 
 const diferenciais = [
-  { icon: "⏱️", title: "Rapidez no atendimento", desc: "Agilidade sem abrir mão da qualidade do serviço." },
-  { icon: "🎓", title: "Especialização técnica", desc: "Equipe qualificada e em constante atualização." },
-  { icon: "✅", title: "Garantia nos serviços", desc: "Trabalho garantido para sua total tranquilidade." },
-  { icon: "🤝", title: "Honestidade e transparência", desc: "Diagnóstico claro e orçamento sem surpresas." },
+  { Icon: Timer, title: "Rapidez no atendimento", desc: "Agilidade sem abrir mão da qualidade do serviço." },
+  { Icon: GraduationCap, title: "Especialização técnica", desc: "Equipe qualificada e em constante atualização." },
+  { Icon: BadgeCheck, title: "Garantia nos serviços", desc: "Trabalho garantido para sua total tranquilidade." },
+  { Icon: Handshake, title: "Honestidade e transparência", desc: "Diagnóstico claro e orçamento sem surpresas." },
 ];
 
 function Home() {
