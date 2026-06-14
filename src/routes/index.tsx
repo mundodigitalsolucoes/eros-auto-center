@@ -4,17 +4,15 @@ import {
   Wrench, Zap, ScanLine, Disc3, Car, Fuel, ShieldCheck, Flag,
   Timer, GraduationCap, BadgeCheck, Handshake, Instagram, MapPin,
 } from "lucide-react";
-import logoAsset from "@/assets/logo.png.asset.json";
-import logoFooterAsset from "@/assets/logo-footer.png.asset.json";
-import mascoteAsset from "@/assets/mascote.png.asset.json";
-import logoPromoAsset from "@/assets/logo-promo.png.asset.json";
+import logoAsset from "../public/assets/logo.png";
+import logoFooterAsset from "../public/assets/logo-footer.png";
+import mascoteAsset from "../public/assets/mascote.png";
+import logoPromoAsset from "../public/assets/logo-promo.png";
 
-const assetUrl = (asset: { url: string }) => asset.url;
-
-const LOGO_URL = assetUrl(logoAsset);
-const LOGO_FOOTER_URL = assetUrl(logoFooterAsset);
-const MASCOTE_URL = assetUrl(mascoteAsset);
-const LOGO_PROMO_URL = assetUrl(logoPromoAsset);
+const LOGO_URL = logoAsset;
+const LOGO_FOOTER_URL = logoFooterAsset;
+const MASCOTE_URL = mascoteAsset;
+const LOGO_PROMO_URL = logoPromoAsset;
 
 const WHATSAPP_URL =
   "https://wa.me/5517996220268?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Eros%20Auto%20Center%20e%20quero%20um%20atendimento.";
