@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import {
+  Wrench, Zap, ScanLine, Disc3, Car, Fuel, ShieldCheck, Flag,
+  Timer, GraduationCap, BadgeCheck, Handshake, Instagram, MapPin,
+} from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
+import logoFooterAsset from "@/assets/logo-footer.png.asset.json";
 import mascoteAsset from "@/assets/mascote.png.asset.json";
 import logoPromoAsset from "@/assets/logo-promo.png.asset.json";
 
@@ -77,21 +82,21 @@ const navLinks = [
 ];
 
 const servicos = [
-  { icon: "🔧", title: "Mecânica em geral", desc: "Reparos e manutenção completa do motor ao câmbio." },
-  { icon: "⚡", title: "Auto elétrico", desc: "Diagnóstico e reparo elétrico com equipamentos modernos." },
-  { icon: "🔍", title: "Diagnóstico automotivo", desc: "Scanner profissional para identificar falhas com precisão." },
-  { icon: "🛑", title: "Freios", desc: "Troca de pastilhas, discos e revisão completa do sistema." },
-  { icon: "🚗", title: "Suspensão", desc: "Amortecedores, molas e alinhamento para mais segurança." },
-  { icon: "💉", title: "Injeção eletrônica", desc: "Limpeza, regulagem e reparo da injeção do seu veículo." },
-  { icon: "🛠️", title: "Manutenção preventiva", desc: "Revisões periódicas para evitar problemas maiores." },
-  { icon: "🏁", title: "Nacionais e importados", desc: "Atendimento técnico especializado para todas as marcas." },
+  { Icon: Wrench, title: "Mecânica em geral", desc: "Reparos e manutenção completa do motor ao câmbio." },
+  { Icon: Zap, title: "Auto elétrico", desc: "Diagnóstico e reparo elétrico com equipamentos modernos." },
+  { Icon: ScanLine, title: "Diagnóstico automotivo", desc: "Scanner profissional para identificar falhas com precisão." },
+  { Icon: Disc3, title: "Freios", desc: "Troca de pastilhas, discos e revisão completa do sistema." },
+  { Icon: Car, title: "Suspensão", desc: "Amortecedores, molas e alinhamento para mais segurança." },
+  { Icon: Fuel, title: "Injeção eletrônica", desc: "Limpeza, regulagem e reparo da injeção do seu veículo." },
+  { Icon: ShieldCheck, title: "Manutenção preventiva", desc: "Revisões periódicas para evitar problemas maiores." },
+  { Icon: Flag, title: "Nacionais e importados", desc: "Atendimento técnico especializado para todas as marcas." },
 ];
 
 const diferenciais = [
-  { icon: "⏱️", title: "Rapidez no atendimento", desc: "Agilidade sem abrir mão da qualidade do serviço." },
-  { icon: "🎓", title: "Especialização técnica", desc: "Equipe qualificada e em constante atualização." },
-  { icon: "✅", title: "Garantia nos serviços", desc: "Trabalho garantido para sua total tranquilidade." },
-  { icon: "🤝", title: "Honestidade e transparência", desc: "Diagnóstico claro e orçamento sem surpresas." },
+  { Icon: Timer, title: "Rapidez no atendimento", desc: "Agilidade sem abrir mão da qualidade do serviço." },
+  { Icon: GraduationCap, title: "Especialização técnica", desc: "Equipe qualificada e em constante atualização." },
+  { Icon: BadgeCheck, title: "Garantia nos serviços", desc: "Trabalho garantido para sua total tranquilidade." },
+  { Icon: Handshake, title: "Honestidade e transparência", desc: "Diagnóstico claro e orçamento sem surpresas." },
 ];
 
 function Home() {
@@ -160,13 +165,13 @@ function Home() {
           <div className="container">
             <div className="section-head">
               <span className="eyebrow">O que fazemos</span>
-              <h2>Serviços automotivos completos</h2>
+              <h2>Serviços de Mecânica e Elétrica</h2>
               <p>Soluções técnicas para manter seu carro rodando com segurança e desempenho.</p>
             </div>
             <div className="grid cols-4">
               {servicos.map((s) => (
                 <article key={s.title} className="card">
-                  <div className="card-icon" aria-hidden="true"><span style={{ fontSize: 24 }}>{s.icon}</span></div>
+                  <div className="card-icon" aria-hidden="true"><s.Icon size={28} strokeWidth={1.75} /></div>
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
                 </article>
@@ -186,7 +191,7 @@ function Home() {
             <div className="grid cols-4">
               {diferenciais.map((d) => (
                 <article key={d.title} className="card">
-                  <div className="card-icon" aria-hidden="true"><span style={{ fontSize: 24 }}>{d.icon}</span></div>
+                  <div className="card-icon" aria-hidden="true"><d.Icon size={28} strokeWidth={1.75} /></div>
                   <h3>{d.title}</h3>
                   <p>{d.desc}</p>
                 </article>
@@ -285,12 +290,12 @@ function Home() {
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener">17 99622-0268</a>
               </div>
               <div className="contato-item">
-                <div className="card-icon" aria-hidden="true"><span style={{ fontSize: 22 }}>📷</span></div>
+                <div className="card-icon" aria-hidden="true"><Instagram size={26} strokeWidth={1.75} /></div>
                 <strong>Instagram</strong>
                 <a href="https://instagram.com/eros.autocenter" target="_blank" rel="noopener">@eros.autocenter</a>
               </div>
               <div className="contato-item">
-                <div className="card-icon" aria-hidden="true"><span style={{ fontSize: 22 }}>📍</span></div>
+                <div className="card-icon" aria-hidden="true"><MapPin size={26} strokeWidth={1.75} /></div>
                 <strong>Endereço</strong>
                 <a href={MAPS_URL} target="_blank" rel="noopener">{ADDRESS}</a>
               </div>
@@ -308,7 +313,7 @@ function Home() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <img src={logoAsset.url} alt="Eros Auto Center" loading="lazy" width={200} height={50} />
+              <img src={logoFooterAsset.url} alt="Eros Auto Center" loading="lazy" width={240} height={90} />
               <p>O melhor amigo do seu carro</p>
             </div>
             <div className="footer-col">

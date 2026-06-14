@@ -50,7 +50,7 @@ h3 { font-size: 1.125rem; }
   display: flex; align-items: center; justify-content: space-between;
   padding: .75rem 1.25rem; max-width: var(--container); margin: 0 auto; gap: 1rem;
 }
-.brand img { height: 44px; width: auto; }
+.brand img { height: 132px; width: auto; }
 .nav-desktop { display: none; gap: 1.75rem; align-items: center; }
 .nav-desktop a {
   font-weight: 600; font-size: .95rem; color: var(--navy);
@@ -88,7 +88,7 @@ h3 { font-size: 1.125rem; }
   .nav-desktop { display: flex; }
   .header-cta { display: inline-flex; }
   .menu-toggle { display: none; }
-  .brand img { height: 50px; }
+  .brand img { height: 150px; }
 }
 
 /* HERO */
@@ -263,7 +263,7 @@ section { padding: 4rem 0; }
   padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.08);
 }
 @media (min-width: 700px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
-.footer-brand img { height: 50px; background: var(--white); padding: .5rem .75rem; border-radius: 8px; }
+.footer-brand img { height: 90px; width: auto; }
 .footer-brand p { margin-top: 1rem; font-style: italic; color: #aab3c9; }
 .footer-col h4 { color: var(--white); font-family: 'Exo 2', sans-serif; font-size: 1rem; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: .05em; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
