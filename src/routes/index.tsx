@@ -11,7 +11,7 @@ import logoPromoAsset from "@/assets/logo-promo.png.asset.json";
 
 const WHATSAPP_URL =
   "https://wa.me/5517996220268?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Eros%20Auto%20Center%20e%20quero%20um%20atendimento.";
-const ADDRESS = "Rua João Urias Gomes, 1776, Vila Toninho, São José do Rio Preto - SP";
+const ADDRESS = "Rua João Urias Gomes 1776 - Vila Toninho - São José do Rio Preto/SP";
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(ADDRESS);
 const ROUTE_URL = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(ADDRESS);
 const REVIEWS_URL = "https://www.google.com/search?q=Eros+Auto+Center+S%C3%A3o+Jos%C3%A9+do+Rio+Preto";
@@ -270,7 +270,6 @@ function Home() {
               />
             </div>
             <div className="local-actions">
-              <a className="btn btn-outline" href={MAPS_URL} target="_blank" rel="noopener">Abrir no Google Maps</a>
               <a className="btn btn-primary" href={ROUTE_URL} target="_blank" rel="noopener">Traçar rota</a>
             </div>
           </div>
@@ -313,7 +312,7 @@ function Home() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <img src={logoFooterAsset.url} alt="Eros Auto Center" loading="lazy" width={240} height={90} />
+              <img src={logoFooterAsset.url} alt="Eros Auto Center" loading="lazy" width={720} height={270} />
               <p>O melhor amigo do seu carro</p>
             </div>
             <div className="footer-col">
@@ -330,7 +329,7 @@ function Home() {
               <ul>
                 <li>17 99622-0268</li>
                 <li>@eros.autocenter</li>
-                <li>Vila Toninho, SJRP - SP</li>
+                <li>{ADDRESS}</li>
               </ul>
             </div>
           </div>
