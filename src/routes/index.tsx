@@ -17,9 +17,12 @@ const LOGO_PROMO_URL = logoPromoAsset;
 const WHATSAPP_URL =
   "https://wa.me/5517996220268?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Eros%20Auto%20Center%20e%20quero%20um%20atendimento.";
 const ADDRESS = "Rua João Urias Gomes 1776 - Vila Toninho - São José do Rio Preto/SP";
-const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(ADDRESS);
-const ROUTE_URL = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(ADDRESS);
-const REVIEWS_URL = "https://www.google.com/search?q=Eros+Auto+Center+S%C3%A3o+Jos%C3%A9+do+Rio+Preto";
+const GOOGLE_REVIEW_URL = "https://g.page/r/CQ589Xn4XnnPEAE/review";
+const GOOGLE_LOCATION_URL = "https://maps.app.goo.gl/VwrSSzx5iq3paibi8";
+const GOOGLE_PROFILE_URL = "https://www.google.com/search?q=Eros+Auto+Center&stick=H4sIAAAAAAAA_-NgU1I1qLA0SUo2STE2MjFPMTZNNDG2MqhITjO3NE1NszC3TDM1TzZIXcQq4FqUX6zgWFqSr-CcmleSWgQAUUn7uzwAAAA&hl=pt-BR&mat=Cfm3CZKERUARElcBa0lj_yfdBNYolTe4V0GlfXcG_SZMa1qYlgnF3CKyKA-dHD0GM_6srRvuwgfTe9H0TkIqXLLLAApGgEl_BR8bzv_HJnD8SUcETzwk3FpAt3DnMBJwstw&authuser=0";
+const MAPS_URL = GOOGLE_LOCATION_URL;
+const ROUTE_URL = GOOGLE_LOCATION_URL;
+const REVIEWS_URL = GOOGLE_PROFILE_URL;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -37,7 +40,7 @@ const jsonLd = {
   },
   areaServed: "São José do Rio Preto",
   priceRange: "$$",
-  sameAs: ["https://www.instagram.com/eros.autocenter"],
+  sameAs: ["https://www.instagram.com/eros.autocenter", GOOGLE_PROFILE_URL],
 };
 
 export const Route = createFileRoute("/")({
@@ -239,14 +242,19 @@ function Home() {
             <div className="section-head">
               <span className="eyebrow">Reputação</span>
               <h2>Avaliações dos nossos clientes</h2>
-              <p>Confira a opinião de quem já confia na Eros Auto Center.</p>
-              <div className="reviews-actions">
-                <a className="btn btn-outline" href={REVIEWS_URL} target="_blank" rel="noopener">Ver avaliações no Google</a>
-                <a className="btn btn-primary" href={REVIEWS_URL} target="_blank" rel="noopener">Avaliar no Google</a>
-              </div>
+              <p>Veja o que os clientes dizem sobre a Eros Auto Center no Google.</p>
             </div>
-            <div className="reviews-placeholder">
-              Área preparada para integração futura com as avaliações do Google Meu Negócio.
+            <div className="google-reviews-card">
+              <div className="stars" aria-label="Avaliação 5 estrelas">★★★★★</div>
+              <h3>Eros Auto Center no Google</h3>
+              <p>
+                Atendimento técnico, transparência no diagnóstico e confiança para cuidar do seu carro em São José do Rio Preto.
+              </p>
+              <div className="reviews-actions">
+                <a className="btn btn-outline" href={GOOGLE_PROFILE_URL} target="_blank" rel="noopener">Ver perfil no Google</a>
+                <a className="btn btn-primary" href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener">Avaliar no Google</a>
+                <a className="btn btn-ghost-light" href={GOOGLE_LOCATION_URL} target="_blank" rel="noopener">Abrir localização</a>
+              </div>
             </div>
           </div>
         </section>
